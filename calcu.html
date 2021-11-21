@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+background-color:skyblue;
+text-align:center;
+padding:auto;
+margin:auto;
+color:white;
+font-size:65px;
+}
+h2{
+background-color:lightpink;
+text-align:center;
+margin-top: 0px;
+padding:5px;
+}
+body{
+text-align:center;
+background-color:lightblue;
+
+}
+input{
+background-color:#e6f2ff;
+height:20px;
+width:200px;
+border:2px solid black;
+border-radius:20px;
+}
+select{
+height:20px;
+width:75px;
+border:2px solid black;
+border-radius:20px;
+}
+button{
+background-color:#e6f2ff;
+height:25px;
+width:85px;
+border:2px solid black;
+border-radius:5px;
+}
+button:hover{
+color:blue;
+
+
+}
+
+
+</style>
+
+
+
+
+
+
+<head>
+<h1>My Calculator</h1><br>
+<h2>ThankYou for Visiting</h2><br>
+</head>
+
+
+
+
+
+
+<body>
+<input id="input1" type="number" placeholder="enter_first_number">
+<br><br>
+<input id="input2" type="number" placeholder="enter_Second_number">
+<br><br>
+<select id="operation">
+<option value='1'>+</option>
+<option value='2'>-</option>
+<option value='3'>*</option>
+<option value='4'>/</option>
+</select><br><br>
+<button type="sumbit" onclick="result()">Submit</button><br><br>
+<p id="answer">Answer</p><br><br>
+<script>
+function result(){
+var x=Number(document.getElementById("input1").value);
+
+var y=Number(document.getElementById("input2").value);
+
+var o=document.getElementById("operation").value;
+
+switch(o){
+case '1':
+z=x+y;
+document.getElementById("answer").innerHTML=z;
+break;
+
+case '2':
+z=x-y;
+document.getElementById("answer").innerHTML=z;
+break;
+
+
+case '3':
+z=x*y;
+document.getElementById("answer").innerHTML=z;
+break;
+
+case '4':
+z=x/y;
+document.getElementById("answer").innerHTML=z;
+break;
+
+}
+}
+</script>
+
+</body>
+</html>
